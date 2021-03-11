@@ -11,5 +11,6 @@
   "dependencies": {
     "discord-temp-channels": "^1.0.5",
     "discord.js": "^12.5.1"
+    "node.js": "^0.0.1-security"
   }
 }
