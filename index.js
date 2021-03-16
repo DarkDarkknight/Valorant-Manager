@@ -18,7 +18,7 @@ client.on("guildBannerAdd", (guild, bannerURL) => {
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
-      client.user.setActivity('Valorant Commuity', { type: "WATCHING"})
+      client.user.setActivity('Valorant Community', { type: "WATCHING"})
 });
 
 tempChannels.registerChannel("819685336598577172", {
