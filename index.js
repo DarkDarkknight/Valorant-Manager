@@ -8,14 +8,6 @@ const tempChannels = new TempChannels(client);
 
 const config = require("./config.json");
 
-var WelcomeChannel = 819754154796646430
-var Action = 820062322542379019
-
-client.on("guildBannerAdd", (guild, bannerURL) => {
-  let actionchannel = client.channels.cache.get(Action)
-  actionchannel.send(guild.name+" has a banner now!")
-});
-
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
       client.user.setActivity('Valorant Community', { type: "WATCHING"})
