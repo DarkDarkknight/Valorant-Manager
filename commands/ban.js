@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args,) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(cantbanthem);
     let toban = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!toban) return message.reply(couldntfinduser);
-    if(toban.hasPermission("BAN_MEMBERS")) return message.reply(samelevelofpower);
+    if(toban.hasPermission("MANAGE_MESSAGES")) return message.reply(samelevelofpower);
     let reason = args.slice(1).join(" ");
     if(!reason) return message.reply(supplyreason);
 
