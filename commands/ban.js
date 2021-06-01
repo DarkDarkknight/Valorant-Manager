@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args,) => {
     .setFooter("Your permission level is 3")
     .setColor('36393e')
 
-    if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(cantbanthem);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(cantbanthem);
     let toban = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!toban) return message.reply(couldntfinduser);
     if(toban.hasPermission("BAN_MEMBERS")) return message.reply(samelevelofpower);
