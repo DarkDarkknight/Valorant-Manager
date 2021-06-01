@@ -6,6 +6,9 @@ const config = require("./config.json");
 const color = require("./color.json")
 const prefix = config.prefix;
 
+const TempChannels = require("discord-temp-channels");
+const tempChannels = new TempChannels(client);
+
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
       client.user.setActivity('Valorant Community', { type: "WATCHING"})
