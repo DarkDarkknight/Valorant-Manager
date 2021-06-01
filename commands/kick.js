@@ -32,10 +32,10 @@ module.exports.run = async (client, message, args,) => {
     .setFooter("Your permission level is 3")
     .setColor('36393e')
 
-    if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply(cantkickthem);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(cantkickthem);
     let tokick = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tokick) return message.reply(couldntfinduser);
-    if(tokick.hasPermission("KICK_MEMBERS")) return message.reply(samelevelofpower);
+    if(tokick.hasPermission("MANAGE_MESSAGES")) return message.reply(samelevelofpower);
     let reason = args.slice(1).join(" ");
     if(!reason) return message.reply(supplyreason);
 
