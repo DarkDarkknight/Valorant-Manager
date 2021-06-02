@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(` **Check your DMs** ${message.author.username}`)
     .setColor(color.white)
 
-if(!message.member.roles.cache.some(role => role.name === config.adminrole)) return message.author.send(memberhelp); + message.channel.send(Dmchecker);
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.author.send(memberhelp); + message.channel.send(Dmchecker);
     message.author.send(adminhelp);
     message.channel.send(Dmchecker);
 }
